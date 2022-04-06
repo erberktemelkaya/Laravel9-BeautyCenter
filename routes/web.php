@@ -29,13 +29,17 @@ Route::get('/',[HomeController::class,'index']);
 Route::get('/deneme',[TestController::class,'deneme']);
 
 
+Route::prefix('admin')->name('admin.')->group(function () {
 
-Route::get('/admin',[AdminHomeController::class,'index'])->name(name:'admin');
+Route::get('',[AdminHomeController::class,'index'])->name(name:'index');
+Route::prefix('category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
 
-Route::get('/admin/category',[AdminCategoryController::class,'index'])->name(name:'admin_category');
-Route::get('/admin/category/create',[AdminCategoryController::class,'create'])->name(name:'admin_category_create');
-Route::post('/admin/category/store',[AdminCategoryController::class,'store'])->name(name:'admin_category_store');
-Route::get('/admin/category/edit/{id}',[AdminCategoryController::class,'edit'])->name(name:'admin_category_edit');
-Route::post('/admin/category/update/{id}',[AdminCategoryController::class,'update'])->name(name:'admin_category_update');
-Route::get('/admin/category/show/{id}',[AdminCategoryController::class,'show'])->name(name:'admin_category_show');
-
+Route::get('/','index')->name(name:'index');
+Route::get('/create','create')->name(name:'create');
+Route::post('/store','store')->name(name:'store');
+Route::get('/edit/{id}','edit')->name(name:'edit');
+Route::post('/update/{id}','update')->name(name:'update');
+Route::get('/show/{id}','show')->name(name:'show');
+Route::get('/delete/{id}','destroy')->name(name:'delete');
+});
+});

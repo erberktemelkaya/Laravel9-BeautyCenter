@@ -13,11 +13,11 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>HTML5 Template for Salon Website</h1>
+                            <h1>TEMELKAYA BEAUTY CENTER</h1>
                             <p>
                                 Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
                             </p>
-                            <a class="btn" href="https://htmlcodex.com/barber-shop-template">Download Now</a>
+                            
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                
                     <span></span>
                 </button>
             </div>
@@ -63,15 +63,24 @@
                     </div>
                     <div class="col-lg-7 col-md-6">
                         <div class="section-header text-left">
-                            <p>Learn About Us</p>
-                            <h2>25 Years Experience</h2>
+                            <p>Hakkımızda</p>
+                            <h2>25 Yıllık Tecrübe</h2>
                         </div>
                         <div class="about-text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                
+Dünyanın güzelliklerle dolu başkenti Ankara’nın kalbi, ………….20 senesinden beri kuaför ve güzellik merkezi hizmeti veriyoruz…
+Hijyen kuralları prensibimizle, değerli misafirlerimizin “tam hayalimdeki gibi oldu” demeleri için, tecrübeli ve yetenekli 40 kişiden oluşan profesyonel ekibimizle hizmet sağlıyoruz.
+Zaradis Yıldız VIP; ulaşılabilir lüks mottosuyla, bakım, güzellik ve doğallığı bir arada sunuyoruz. Aynada en güzel halinizi görmeniz için sizi salonumuza bekliyoruz.15 Yıldır, her ortamda her daim göz kamaştıran olmanız için yanınızdayız.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                            80′ li yılların ortasında iğneli epilasyon ile sektöre adımını atan Gülümser Öztürk, sizlere daha iyi bir hizmet verebilmek amacıyla, 1997 senesinden beri Aşağı Ayrancı ‘ da “Rose Güzellik” salonunu adı altında profesyonel ekibi ile sizlere güzellik ve bakım hizmeti vermektedir.
+
+İğneli epilasyon ve cilt bakımı ile başladığımız bu yolda kaş tasarımı, lazer epilasyon, ipek kirpik, kirpik lifting, hydrafacial, tırnak tasarımı, kalıcı oje, cilt gençleştirme gibi hizmetleri, yenilikleri takip ederek, doğru ekipman ve doğru ekiple sizlere güvenle sunmaktayız.
+
+Bizim için en önemli husus sizlere güzellik hizmetlerini güvenle verebilmektir. Bu nedenle uygulatmayı düşündüğünüz her işlem öncesi ve sonrasında uzman ve güler yüzlü ekibimizden her zaman bilgi edinebilirsiniz.
+
+Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler yüzlü hizmeti sizlere sağlamaktır. Sizleri yalnızca güzellik hizmeti almak için değil sohbet ve tanışmak için de merkezimize bekleriz.
                             </p>
                             <a class="btn" href="">Learn More</a>
                         </div>
@@ -146,7 +155,7 @@
                                 <img src="{{asset('assets')}}/img/price-1.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Hair Cut</h2>
+                                <h2>Buz Epilasyon</h2>
                                 <h3>$9.99</h3>
                             </div>
                         </div>
@@ -157,7 +166,7 @@
                                 <img src="{{asset('assets')}}/img/price-2.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Hair Wash</h2>
+                                <h2>Cilt Bakımı</h2>
                                 <h3>$10.99</h3>
                             </div>
                         </div>
@@ -168,7 +177,7 @@
                                 <img src="{{asset('assets')}}/img/price-3.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Hair Color</h2>
+                                <h2>Dermapen</h2>
                                 <h3>$11.99</h3>
                             </div>
                         </div>
@@ -179,7 +188,7 @@
                                 <img src="{{asset('assets')}}/img/price-4.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Hair Shave</h2>
+                                <h2>İğnesiz Mezoterapi</h2>
                                 <h3>$12.99</h3>
                             </div>
                         </div>
@@ -190,7 +199,7 @@
                                 <img src="{{asset('assets')}}/img/price-5.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Hair Straight</h2>
+                                <h2>Bölgesel İncelme</h2>
                                 <h3>$13.99</h3>
                             </div>
                         </div>
@@ -201,7 +210,7 @@
                                 <img src="{{asset('assets')}}/img/price-6.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Facial</h2>
+                                <h2>Çatlak Onarımı</h2>
                                 <h3>$14.99</h3>
                             </div>
                         </div>
@@ -212,7 +221,7 @@
                                 <img src="{{asset('assets')}}/img/price-7.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Shampoo</h2>
+                                <h2>Kalıcı Makyaj</h2>
                                 <h3>$15.99</h3>
                             </div>
                         </div>
@@ -223,7 +232,7 @@
                                 <img src="{{asset('assets')}}/img/price-8.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Beard Trim</h2>
+                                <h2>Kirpik Lifting</h2>
                                 <h3>$16.99</h3>
                             </div>
                         </div>
@@ -234,7 +243,7 @@
                                 <img src="{{asset('assets')}}/img/price-9.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Beard Shave</h2>
+                                <h2>Göğüs Büyütme</h2>
                                 <h3>$17.99</h3>
                             </div>
                         </div>
@@ -245,7 +254,7 @@
                                 <img src="{{asset('assets')}}/img/price-10.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Wedding Cut</h2>
+                                <h2>Epilasyon ve Ağda</h2>
                                 <h3>$18.99</h3>
                             </div>
                         </div>
@@ -256,7 +265,7 @@
                                 <img src="{{asset('assets')}}/img/price-11.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Clean Up</h2>
+                                <h2>Masajlar</h2>
                                 <h3>$19.99</h3>
                             </div>
                         </div>
@@ -267,7 +276,7 @@
                                 <img src="{{asset('assets')}}/img/price-12.jpg" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Massage</h2>
+                                <h2>El ve Ayak Bakımı</h2>
                                 <h3>$20.99</h3>
                             </div>
                         </div>

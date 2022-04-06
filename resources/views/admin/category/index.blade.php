@@ -13,7 +13,7 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-							<a href="/admin/category/create" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Category</a>
+							<a href="{{route('admin.category.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Category</a>
 								
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
@@ -66,9 +66,9 @@
 								<td>{{$rs->description}}</td>
 								<td>{{$rs->image}}</td>
 								<td>{{$rs->status}}</td>
-								<td><a href="/admin/category/edit/{{$rs->id}}"class="btn btn-dark">Edit </a> </td>
-								<td><a href="/admin/category/delete/{{$rs->id}}"class="btn btn-danger"> Delete </a></td>
-								<td><a href="/admin/category/show/{{$rs->id}}"class="btn btn-warning">Show </a></td>
+								<td><a href="{{route('admin.category.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
+								<td><a href="{{route('admin.category.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
+								<td><a href="{{route('admin.category.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
 						</tr>
 						
 						

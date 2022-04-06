@@ -12,8 +12,8 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="title">
-                            <a href="/admin/category/edit/{{$data->id}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Edit</a>
-                            <a href="/admin/category/destroy/{{$data->id}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Delete</a>
+                            <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Edit</a>
+                            <a href="{{route('admin.category.delete',['id'=>$data->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-block btn-success btn-sm" style="width: 200px">Delete</a>
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 
