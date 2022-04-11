@@ -16,7 +16,10 @@
 								<h4>Form</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
-								
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="/admin">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Edit Category : {{$data->title}}</li>
+								</ol>
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
@@ -43,6 +46,19 @@
 					</div>
 					<form role ="form" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
+
+						<div class="form-group">
+							<label>Parent Category</label>
+
+							<select class="from-control select2" name="parent_id" style="width: 100%;">
+							<option value="0" selected="selected">Main Category</option>
+							@foreach($datalist as $rs)
+                            	<option value="{{$rs->id}}" @if ($rs->id == $data->parent_id) selected="selected" @endif>
+                                {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>
+                             @endforeach
+						</select>
+						</div>
+
 						<div class="form-group">
 							<label for="exampleInputEmail1">Title</label>
 							<input type="text" class="form-control" name="title" value="{{$data->title}}" >
@@ -62,13 +78,14 @@
 							
 						</div>
 						<div class="form-group">
-                            <label for="exampleInputFile">Image</label>
+							<label for="exampleInputFile">Image</label>
 							<div class="input-group">
 								<div class="custom-file">
-                            <input type="file" class="custom-file-input" name="image">
-							<label class="custom-file-label" for="exampleInputFile">Choose Image File</label>
-                        </div>
-						</div>
+								<input type="file" class="custom-file-input" name="image">
+								<label class="custom-file-label" for="exampleInputFile">Choose image file</label>
+
+								</div>
+							</div>
 						</div>
 
                         <div class="form-group">
@@ -87,7 +104,4 @@
                         </div>
 					</form>
 					
-
-
-
   @endsection
