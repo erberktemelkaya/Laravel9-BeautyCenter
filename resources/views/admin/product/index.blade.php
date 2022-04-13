@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Category List')
+@section('title','Product List')
 
  
 
@@ -13,18 +13,21 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-							<a href="{{route('admin.category.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Category</a>
+
+							<a href="{{route('admin.product.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Product</a>
+
 								
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
-								<ol class="breadcrumb">
-									
-								</ol>
+								
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-								
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									April 2022
+
+								</a>
 								<div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#">Export List</a>
 									<a class="dropdown-item" href="#">Policies</a>
@@ -37,18 +40,23 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix mb-20">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Category List</h4>
+
+							
+							<h4 class="text-blue h4">Product List</h4>
 							
 						</div>
 						<div class="pull-right">
+							
 						</div>
 					</div>
 					<table class="table table-bordered">
 						<thead>
 							<tr>
 								<th style="width: 10px">Id</th>
-								<th>Parents</th>
+								<th>Category</th>
 								<th>Title</th>
+								<th>Price</th>
+								<th>Quantity</th>
 								<th>Image</th>
 								<th>Status</th>
 								<th style="width:40px">Edit</th>
@@ -57,27 +65,32 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($data as $rs)
+
+						@foreach($data as $rs)
 							<tr>
 								<td>{{$rs->id}}</td>
 								<td>
-								{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
+								{{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
 								</td>
-								
 								<td>{{$rs->title}}</td>
+								<td>{{$rs->price}}</td>
+								<td>{{$rs->quantity}}</td>
+								
+								
 								<td>
 									@if ($rs->image)
 									<img src="{{Storage::url($rs->image)}}" style="height: 40px">
 									@endif
-								
+									
+							
 								</td>
 								<td>{{$rs->status}}</td>
-								<td><a href="{{route('admin.category.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
-								<td><a href="{{route('admin.category.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
-								<td><a href="{{route('admin.category.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
-						</tr>
-						
-						
+								<td><a href="{{route('admin.product.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
+                                <td><a href="{{route('admin.product.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
+                                <td><a href="{{route('admin.product.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
+								
+							<tr>
+							
 						@endforeach
 						</tbody>
 					</table>

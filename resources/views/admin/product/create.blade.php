@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Add Category')
+@section('title','Add Product')
 
  
 
@@ -22,7 +22,7 @@
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="/admin">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Add Category</li>
+									<li class="breadcrumb-item active" aria-current="page">Add Product</li>
 								</ol>
 							</nav>
 						</div>
@@ -44,23 +44,22 @@
             <div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">ADD CATEGORY</h4>
+							<h4 class="text-blue h4">ADD Product</h4>
 							
 						</div>
 						
 					</div>
-					<form role ="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
+					<form role ="form" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
 
 						<div class="form-group">
-							<label>Parent Category</label>
+							<label>Parent Product</label>
 
-							<select class="from-control select2" name="parent_id" style="width: 100%;">
-							<option value="0" selected="selected">Main Category</option>
+							<select class="from-control select2" name="category_id" style="width: 100%;">
+							
 							@foreach($data as $rs)
-							<option value="{{$rs->id}}" > {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>
-								
+								<option value="{{$rs->id}}">{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs, $rs->title) }}</option>
 								@endforeach
 						</select>
 						</div>
@@ -80,6 +79,30 @@
                         <div class="form-group">
 							<label>Description</label>
 							<input class="form-control" type="text" name="description" placeholder="Description">
+						</div>
+						<div class="form-group">
+							<label>Price</label>
+							<input class="form-control" type="number" name="price" value="0">
+						</div>
+						<div class="form-group">
+							<label>Quantity</label>
+							<input class="form-control" type="number" name="quantity" value="0">
+						</div>
+						<div class="form-group">
+							<label>Minimum Quantity</label>
+							<input class="form-control" type="number" name="minquantity" value="0">
+						</div>
+						<div class="form-group">
+							<label>Tax %</label>
+							<input class="form-control" type="number" name="tax" value="0">
+						</div>
+						<div class="form-group">
+							<label>Detail Information</label>
+							<textarea class="form-control" name="detail">
+
+
+                            </textarea>
+							
 						</div>
 						
 						
