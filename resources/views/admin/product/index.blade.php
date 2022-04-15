@@ -58,6 +58,7 @@
 								<th>Price</th>
 								<th>Quantity</th>
 								<th>Image</th>
+								<th>Image Gallery</th>
 								<th>Status</th>
 								<th style="width:40px">Edit</th>
 								<th style="width:40px">Delete</th>
@@ -84,6 +85,11 @@
 									
 							
 								</td>
+								<td> <a href="{{route('admin.image.index',['pid'=>$rs->id])}}"
+								onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
+								<img src="{{asset('adminpanel')}}/vendors/images/gallery.png" style="height: 40px" alt="">	
+								</td>
+                                </a>
 								<td>{{$rs->status}}</td>
 								<td><a href="{{route('admin.product.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
                                 <td><a href="{{route('admin.product.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
