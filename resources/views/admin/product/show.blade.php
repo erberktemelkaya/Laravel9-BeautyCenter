@@ -54,8 +54,9 @@
 							</tr>
                             <tr>
                                 <th style="width: 50px">Category</th>
-                                <td>{{$data->category_id}}</td>
-                            
+                                <td>
+                                {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data->category,$data->category->title)}}
+                               </td>
 								
 							</tr>
                             <tr>
