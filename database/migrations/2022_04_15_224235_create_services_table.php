@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->foreignId(column:'category_id')->nullable();
             $table->foreignId(column:'user_id')->nullable();
@@ -23,9 +23,6 @@ return new class extends Migration
             $table->string(column:'image')->nullable();
             $table->string(column:'detail')->nullable();
             $table->float(column:'price')->nullable();
-            $table->integer(column:'quantity')->nullable();
-            $table->integer(column:'minquantity')->nullable();
-            $table->integer(column:'tax')->nullable();
             $table->string(column:'status', length:6)->default('False');
             $table->timestamps();
         });
@@ -38,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('services');
     }
 };

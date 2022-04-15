@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Product List')
+@section('title','Service List')
 
  
 
@@ -14,7 +14,7 @@
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
 
-							<a href="{{route('admin.product.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Product</a>
+							<a href="{{route('admin.service.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Service</a>
 
 								
 							</div>
@@ -42,7 +42,7 @@
 						<div class="pull-left">
 
 							
-							<h4 class="text-blue h4">Product List</h4>
+							<h4 class="text-blue h4">Service List</h4>
 							
 						</div>
 						<div class="pull-right">
@@ -56,7 +56,6 @@
 								<th>Category</th>
 								<th>Title</th>
 								<th>Price</th>
-								<th>Quantity</th>
 								<th>Image</th>
 								<th>Image Gallery</th>
 								<th>Status</th>
@@ -75,7 +74,7 @@
 								</td>
 								<td>{{$rs->title}}</td>
 								<td>{{$rs->price}}</td>
-								<td>{{$rs->quantity}}</td>
+								
 								
 								
 								<td>
@@ -91,9 +90,9 @@
 								</td>
                                 </a>
 								<td>{{$rs->status}}</td>
-								<td><a href="{{route('admin.product.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
-                                <td><a href="{{route('admin.product.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
-                                <td><a href="{{route('admin.product.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
+								<td><a href="{{route('admin.service.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
+                                <td><a href="{{route('admin.service.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
+                                <td><a href="{{route('admin.service.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
 								
 							<tr>
 							

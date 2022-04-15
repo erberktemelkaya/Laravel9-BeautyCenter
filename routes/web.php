@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
-use App\Http\Controllers\AdminPanel\AdminProductController;
+use App\Http\Controllers\AdminPanel\AdminServiceController;
 use App\Http\Controllers\AdminPanel\CategoryController;
 use App\Http\Controllers\AdminPanel\ImageController;
 /*
@@ -35,8 +35,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::get('',[AdminHomeController::class,'index'])->name(name:'index');
 
-//**********************ADMIN PRODUCT ROUTES**********************/
-Route::prefix('/product')->name('product.')->controller(AdminProductController::class)->group(function () {
+//**********************ADMIN SERVICES ROUTES**********************/
+Route::prefix('/service')->name('service.')->controller(AdminServiceController::class)->group(function () {
 
     Route::get('/','index')->name(name:'index');
     Route::get('/create','create')->name(name:'create');
@@ -58,7 +58,7 @@ Route::post('/update/{id}','update')->name(name:'update');
 Route::get('/show/{id}','show')->name(name:'show');
 Route::get('/delete/{id}','destroy')->name(name:'delete');
     });
-    //**********************ADMIN PRODUCT IMAGE GALLERY ROUTES**********************/
+    //**********************ADMIN SERVICE IMAGE GALLERY ROUTES**********************/
     Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
 
     Route::get('/{pid}','index')->name(name:'index');

@@ -5,13 +5,13 @@ namespace App\Http\Controllers\AdminPanel;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
-use App\Models\Product;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Constraint\Operator;
 use Illuminate\Support\Facades\Storage;
 
 
-class AdminProductController extends Controller
+class AdminServiceController extends Controller
 {
 
     /**
@@ -22,8 +22,8 @@ class AdminProductController extends Controller
     public function index()
     {
 
-        $data = Product::all();
-        return view('admin.product.index',[
+        $data = Service::all();
+        return view('admin.service.index',[
 
             'data'=> $data
 
@@ -38,7 +38,7 @@ class AdminProductController extends Controller
     public function create()
     {
         $data = Category::all();
-        return view('admin.product.create',[
+        return view('admin.service.create',[
 
             'data'=> $data
 
@@ -54,7 +54,7 @@ class AdminProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data= new Product();
+        $data= new Service();
         $data->category_id= $request->category_id;
         $data->user_id= 0; //$request->category_id;
         $data->title = $request->title;
@@ -62,28 +62,25 @@ class AdminProductController extends Controller
         $data->description = $request->description;
         $data->detail = $request->detail;
         $data->price = $request->proc_nice;
-        $data->quantity = $request->quantity;
-        $data->minquantity = $request->minquantity;
-        $data->tax = $request->tax;
         $data->status = $request->status;
         if ($request->file('image')){
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
 
-        return redirect('admin/product');
+        return redirect('admin/service');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product,$id)
+    public function show(Service $service,$id)
     {
-        $data=Product::find($id);
-        return view ('admin.product.show',[
+        $data=Service::find($id);
+        return view ('admin.service.show',[
            'data' => $data 
         ]);
     }
@@ -91,15 +88,15 @@ class AdminProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product,$id)
+    public function edit(Service $service,$id)
     {
 
-        $data=Product::find($id);
+        $data=Service::find($id);
         $datalist=Category::all();
-        return view ('admin.product.edit',[
+        return view ('admin.service.edit',[
            'data' => $data ,
            'datalist' => $datalist 
         ]);
@@ -110,12 +107,12 @@ class AdminProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product,$id)
+    public function update(Request $request, Service $service,$id)
     {
-        $data=Product::find($id);
+        $data=Service::find($id);
         $data->category_id= $request->category_id;
         $data->user_id= 0; //$request->category_id;
         $data->title = $request->title;
@@ -123,29 +120,26 @@ class AdminProductController extends Controller
         $data->description = $request->description;
         $data->detail = $request->detail;
         $data->price = $request->price;
-        $data->quantity = $request->quantity;
-        $data->minquantity = $request->minquantity;
-        $data->tax = $request->tax;
-        $data->status = $request->status;
+       $data->status = $request->status;
         if ($request->file('image')){
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
-        return redirect ('admin/product');
+        return redirect ('admin/service');
 
     } 
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Product  $product
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product,$id)
+    public function destroy(Service $service,$id)
     {
-        $data=Product::find($id);
+        $data=Service::find($id);
         Storage::delete($data->image);
         $data->delete();
-        return redirect ('admin/product');
+        return redirect ('admin/service');
     }
 }

@@ -108,8 +108,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="/admin/product" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-briefcase"></i><span class="mtext">    Products</span>
+						<a href="/admin/service" class="dropdown-toggle no-arrow">
+						<i class="icon-copy ion-briefcase"></i><span class="mtext">    Services</span>
 						</a>
 					</li>
 					<li>

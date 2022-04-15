@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Image;
-use App\Models\Product;
+use App\Models\Service;
 use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
@@ -18,12 +18,12 @@ class ImageController extends Controller
      */
     public function index($pid)
     {
-        $product=Product::find($pid);
+        $service=Service::find($pid);
         //$images=Image::where('product_id',$pid);
         $images=DB::table('images')->where('product_id',$pid)->get();
         return view('admin.image.index',[
 
-            'product'=> $product,
+            'service'=> $service,
             'images'=> $images,
 
         ]);

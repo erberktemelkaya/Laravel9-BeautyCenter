@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Show Product')
+@section('title','Show Service')
 
  
 
@@ -12,8 +12,8 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="title">
-                            <a href="{{route('admin.product.edit',['id'=>$data->id])}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Edit</a>
-                            <a href="{{route('admin.product.delete',['id'=>$data->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-block btn-success btn-sm" style="width: 200px">Delete</a>
+                            <a href="{{route('admin.service.edit',['id'=>$data->id])}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Edit</a>
+                            <a href="{{route('admin.service.delete',['id'=>$data->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-block btn-success btn-sm" style="width: 200px">Delete</a>
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 
@@ -83,23 +83,7 @@
                             
 								
 							</tr>
-                            <tr>
-                                <th style="width: 50px">Quantity</th>
-                                <td>{{$data->quantity}}</td>
-                            
-								
-							</tr>
-                            <tr>
-                                <th style="width: 50px">Minimum Quantity</th>
-                                <td>{{$data->minquantity}}</td>
-                            
-								
-							</tr>
-                            <tr>
-                                <th style="width: 50px">Tax</th>
-                                <td>{{$data->tax}}</td>
-                            
-								
+                           
 							</tr>
                             <tr>
                                 <th style="width: 50px">Detail</th>

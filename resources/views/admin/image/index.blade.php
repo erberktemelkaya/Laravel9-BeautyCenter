@@ -1,14 +1,14 @@
 @extends('layouts.adminwindow')
 
-@section('title','Product Image Gallery ')
+@section('title','service Image Gallery ')
 
  
 
   @section('content')
 
-  <h3>{{$product->title}}</h3>
+  <h3>{{$service->title}}</h3>
   <hr>
-  <form role ="form" action="{{route('admin.image.store',['pid'=>$product->id])}}" method="post" enctype="multipart/form-data">
+  <form role ="form" action="{{route('admin.image.store',['pid'=>$service->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         
                         <div class="input-group">
@@ -31,7 +31,7 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix mb-20">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Product Image List</h4>
+							<h4 class="text-blue h4">Service Image List</h4>
 							
 						</div>
 						<div class="pull-right">
@@ -60,8 +60,8 @@
 								
 								</td>
 								
-								<td><a href="{{route('admin.image.update',['pid'=>$product->id,'id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
-								<td><a href="{{route('admin.image.delete',['pid'=>$product->id,'id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
+								<td><a href="{{route('admin.image.update',['pid'=>$service->id,'id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
+								<td><a href="{{route('admin.image.delete',['pid'=>$service->id,'id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
 								
 						</tr>
 						
