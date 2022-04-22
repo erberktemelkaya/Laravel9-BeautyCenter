@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+    /*
      * Run the migrations.
      *
      * @return void
@@ -21,14 +21,14 @@ return new class extends Migration
             $table->string(column:'keywords')->nullable();
             $table->string(column:'description')->nullable();
             $table->string(column:'image')->nullable();
-            $table->string(column:'detail')->nullable();
+            $table->text(column:'detail')->nullable();
             $table->float(column:'price')->nullable();
             $table->string(column:'status', length:6)->default('False');
             $table->timestamps();
         });
     }
 
-    /**
+    /*
      * Reverse the migrations.
      *
      * @return void

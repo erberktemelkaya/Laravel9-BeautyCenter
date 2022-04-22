@@ -88,12 +88,12 @@
 				<ul id="accordion-menu">
 				<li>
 						<a href="/admin" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-android-home"></i><span class="mtext">    Dashboard</span>
+						<i class="micon icon-copy ion-android-home"></i><span class="mtext">    Dashboard</span>
 						</a>
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-						<i class="icon-copy ion-ios-box"></i></span><span class="mtext">      Orders</span>
+						<i class="micon icon-copy ion-ios-box"></i></span><span class="mtext">      Orders</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="index.html">New Orders</a></li>
@@ -104,32 +104,32 @@
 					
 					<li>
 						<a href="/admin/category" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-grid"></i><span class="mtext">    Categories</span>
+						<i class="micon icon-copy ion-grid"></i><span class="mtext">    Categories</span>
 						</a>
 					</li>
 					<li>
 						<a href="/admin/service" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-briefcase"></i><span class="mtext">    Services</span>
+						<i class="micon icon-copy ion-briefcase"></i><span class="mtext">    Services</span>
 						</a>
 					</li>
 					<li>
 						<a href="/admin/comment" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-chatbox-working"></i> <span class="mtext">    Comments</span>
+						<i class="micon icon-copy ion-chatbox-working"></i> <span class="mtext">    Comments</span>
 						</a>
 					</li>
 					<li>
 						<a href="/admin/faq" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-help"></i><span class="mtext">   FAQ</span>
+						<i class="micon icon-copy ion-help"></i><span class="mtext">   FAQ</span>
 						</a>
 					</li>
 					<li>
 						<a href="/admin/messages" class="dropdown-toggle no-arrow">
-                    <i class="icon-copy ion-email"></i><span class="mtext">    Messages</span>
+                    <i class="micon icon-copy ion-email"></i><span class="mtext">    Messages</span>
 						</a>
 					</li>
 					<li>
 						<a href="/admin/user" class="dropdown-toggle no-arrow">
-						<i class="icon-copy ion-person"></i><span class="mtext">     Users</span>
+						<i class="micon icon-copy ion-person"></i><span class="mtext">     Users</span>
 						</a>
 					</li>
 					<li>
@@ -145,7 +145,7 @@
 					</li>
 					<li>
 					<a href="admin/setting" class="dropdown-toggle no-arrow">
-                        <span class="icon-copy ion-gear-a"></span><span class="mtext">    Settings</span>
+                        <span class="micon icon-copy ion-gear-a"></span><span class="mtext">    Settings</span>
                         </a>
 						
 					</li>
