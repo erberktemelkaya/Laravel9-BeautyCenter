@@ -110,138 +110,21 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
                     <h2>We Provide Best Price in the City</h2>
                 </div>
                 <div class="row">
+                @foreach($servicelist1 as $rs)
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="price-item">
                             <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-1.jpg" alt="Image">
+                                <img src="{{Storage::url($rs->image)}} " style="height:100px; width:100px" alt="Image">
                             </div>
                             <div class="price-text">
-                                <h2>Buz Epilasyon</h2>
-                                <h3>$9.99</h3>
+                                <h2>{{$rs->title}}</h2>
+                                <h3>{{$rs->price}}</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-2.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Cilt Bakımı</h2>
-                                <h3>$10.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-3.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Dermapen</h2>
-                                <h3>$11.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-4.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>İğnesiz Mezoterapi</h2>
-                                <h3>$12.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-5.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Bölgesel İncelme</h2>
-                                <h3>$13.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-6.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Çatlak Onarımı</h2>
-                                <h3>$14.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-7.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Kalıcı Makyaj</h2>
-                                <h3>$15.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-8.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Kirpik Lifting</h2>
-                                <h3>$16.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-9.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Göğüs Büyütme</h2>
-                                <h3>$17.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-10.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Epilasyon ve Ağda</h2>
-                                <h3>$18.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-11.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>Masajlar</h2>
-                                <h3>$19.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="price-item">
-                            <div class="price-img">
-                                <img src="{{asset('assets')}}/img/price-12.jpg" alt="Image">
-                            </div>
-                            <div class="price-text">
-                                <h2>El ve Ayak Bakımı</h2>
-                                <h3>$20.99</h3>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    
+                    
                 </div>
             </div>
         </div>
