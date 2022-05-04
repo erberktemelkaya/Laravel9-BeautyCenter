@@ -4,9 +4,9 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>TEMELKAYA BEAUTY CENTER</h1>
+                            <h1>BEAUTY CENTER</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi ornare velit non. Aliqua metus tortor auctor quis sem.
+                               Güzellik merkezi ile ilgili açıklama yaz..
                             </p>
                             
                         </div>
@@ -59,14 +59,14 @@
                             <i class="fa fa-list-alt"></i>
                             <a href="">{{$rs->title}}</a>
                             <i class="fa fa-calendar-alt"></i>
-                            <p>01-Jan-2045</p>
+                            <p>29 Nisan 2022</Np>
                         </div>
                         <div class="blog-text">
-                            <h2>Lorem ipsum dolor</h2>
+                            <h2>{{$rs->title}}</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
+                            {{$rs->description}}
                             </p>
-                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            <a href="{{route('service',['id'=>$rs->id])}}" class="btn"> <i class="fa fa-angle-right"></i> Read More</a>
                         </div>
                     </div>
                     @endforeach

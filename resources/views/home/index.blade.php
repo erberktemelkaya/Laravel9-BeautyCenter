@@ -132,9 +132,15 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
         
         
         <!-- Testimonial Start -->
+        <div class="section-header text-center">
+                    <p>Sizden Gelenler</p>
+                    <h2>Bizim Hakkımızdaki Yorumlarınız</h2>
+                </div>
         <div class="testimonial">
             <div class="container">
+                
                 <div class="owl-carousel testimonials-carousel">
+                    
                     <div class="testimonial-item">
                         <img src="{{asset('assets')}}/img/testimonial-1.jpg" alt="Image">
                         <p>
@@ -169,8 +175,8 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
         <div class="team">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Our Barber Team</p>
-                    <h2>Meet Our Hair Cut Expert Barber</h2>
+                    <p>Güzellik Uzmanlarımız</p>
+                    <h2>Güzellik Uzmanlarımız ile tanışın!</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">

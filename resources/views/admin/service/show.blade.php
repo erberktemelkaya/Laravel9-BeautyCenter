@@ -79,7 +79,7 @@
 							</tr>
                             <tr>
                                 <th style="width: 50px">Price</th>
-                                <td>{{$data->price}}</td>
+                                <td>${{$data->price}}</td>
                             
 								
 							</tr>

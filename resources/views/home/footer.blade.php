@@ -26,7 +26,7 @@
                                     <a href="">Privacy policy</a>
                                     <a href="">Cookies</a>
                                     <a href="">Help</a>
-                                    <a href="">FQAs</a>
+                                    <a href="">FAQs</a>
                                 </div>
                             </div>
                         </div>
@@ -48,10 +48,10 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Beauty Center</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p>Designed By <a href="https://instagram.com/erberktemelkaya">Erberk Temelkaya</a></p>
                     </div>
                 </div>
             </div>

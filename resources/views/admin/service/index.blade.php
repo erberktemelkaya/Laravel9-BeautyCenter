@@ -73,7 +73,7 @@
 								{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
 								</td>
 								<td>{{$rs->title}}</td>
-								<td>{{$rs->price}}</td>
+								<td>${{$rs->price}}</td>
 								
 								
 								
