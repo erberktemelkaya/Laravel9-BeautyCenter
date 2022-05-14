@@ -29,6 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/',[HomeController::class,'index'])->name(name:'home');;
 Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');;
+Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;
 
 Route::get('/deneme',[TestController::class,'deneme']);
 

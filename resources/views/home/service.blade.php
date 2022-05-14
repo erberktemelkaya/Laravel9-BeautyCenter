@@ -29,7 +29,7 @@
                     <h2>{{$data->title}}</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-12 col-md-12">
                         <div class="service-item">
                             <div class="service-img">
                                 <img src="{{Storage::url($data->image)}}" alt="Image">
@@ -39,35 +39,17 @@
                                 <img src="{{Storage::url($rs->image)}}" alt="Image">
                             </div>
                             @endforeach
-                            <h3>{{$data->title}}</h3>
+                            <h3> Bilgi </h3>
                             <p>
                             {{$data->description}}
                             </p>
-                            <a class="btn" href="">Price : ${{$data->price}}</a>
-                        </div>
-                    </div>
-                      <!-- Service Start -->
-        <div class="service">
-            <div class="container">
-                <div class="section-header text-center">
-                    
-                    <h2>Detail</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="{{Storage::url($data->image)}}" alt="Image">
-                            </div>
-                            @foreach($images as $rs)
-                            <div class="service-img">
-                                <img src="{{Storage::url($rs->image)}}" alt="Image">
-                            </div>
-                            @endforeach
+                            <h3> Detaylar </h3>
+                        
                             <p>{!!$data->detail!!}</p>
-                            <a class="btn" href="">Price : ${{$data->price}}</a>
+                            <a class="btn" href="">Ücret : {{$data->price}}₺</a>
                         </div>
                     </div>
+              
                    
                 </div>
             </div>

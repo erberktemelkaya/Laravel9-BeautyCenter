@@ -67,17 +67,15 @@
 						<tbody>
 
 						@foreach($data as $rs)
-							<tr>
-								<td>{{$rs->id}}</td>
-								<td>
-								{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
-								</td>
-								<td>{{$rs->title}}</td>
-								<td>${{$rs->price}}</td>
-								
-								
-								
-								<td>
+                            <tr>
+                                <td>{{$rs->id}}</td>
+                                <td>
+                                {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}
+                                </td>
+                                <td>{{$rs->title}}</td>
+                                <td>{{$rs->price}}</td>
+                               
+                                <td>
 									@if ($rs->image)
 									<img src="{{Storage::url($rs->image)}}" style="height: 40px">
 									@endif
