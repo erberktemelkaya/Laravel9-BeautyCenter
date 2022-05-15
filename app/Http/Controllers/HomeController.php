@@ -5,6 +5,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use Illuminate\Support\Facades\DB;
+use App\Models\Setting;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,10 @@ class HomeController extends Controller
         $page='home';
         $sliderdata=Service::limit(20)->get();
         $servicelist1=Service::limit(20)->get();
+        $setting= Setting::first();
         return view("home.index",[
             'page'=>$page,
+            'setting'=>$setting,
             'sliderdata'=> $sliderdata,
             'servicelist1'=> $servicelist1
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryControlle
 use App\Http\Controllers\AdminPanel\AdminServiceController;
 use App\Http\Controllers\AdminPanel\CategoryController;
 use App\Http\Controllers\AdminPanel\ImageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +36,10 @@ Route::get('/deneme',[TestController::class,'deneme']);
 
 Route::prefix('admin')->name('admin.')->group(function () {
 
-Route::get('',[AdminHomeController::class,'index'])->name(name:'index');
+Route::get('/',[AdminHomeController::class,'index'])->name(name:'index');
+//**********************GENERAL SERVICES ROUTES**********************/
+Route::get('/setting',[AdminHomeController::class,'setting'])->name(name:'setting');
+Route::post('/setting',[AdminHomeController::class,'settingUpdate'])->name(name:'setting.update');
 
 //**********************ADMIN SERVICES ROUTES**********************/
 Route::prefix('/service')->name('service.')->controller(AdminServiceController::class)->group(function () {
