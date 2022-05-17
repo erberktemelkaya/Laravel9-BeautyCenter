@@ -6,7 +6,7 @@
         <meta name="description" content="@yield("description")">
         <meta name="keywords" content="@yield("keywords")">
         <meta name="author" content="Erberk TEMELKAYA">
-        <link rel = "icon" thpe="image/x-icon" href="/images/favicon.ico">
+        <link rel="shortcut icon" href="{{Storage::url($setting->icon)}}" type="image/x-icon">
 
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">

@@ -27,9 +27,13 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+//**********************HOME PAGE ROUTES**********************/
+Route::get('/',[HomeController::class,'index'])->name(name:'home');
+Route::get('/about',[HomeController::class,'about'])->name(name:'about');
+Route::get('/references',[HomeController::class,'references'])->name(name:'references');
+Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
 
-Route::get('/',[HomeController::class,'index'])->name(name:'home');;
-Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');;
+Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');
 Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;
 
 Route::get('/deneme',[TestController::class,'deneme']);

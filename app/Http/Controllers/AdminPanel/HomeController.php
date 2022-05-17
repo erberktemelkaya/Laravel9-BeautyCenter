@@ -32,12 +32,12 @@ class HomeController extends Controller
     {
         $id=$request->input('id');
 
-        $data= Setting::find($id);
+        $data= Setting::find(1);
         $data->title=$request->input('title');
         $data->keywords=$request->input('keywords');
         $data->description=$request->input('description');
         $data->company=$request->input('company');
-        $data->adress=$request->input('adress');
+        $data->address=$request->input('address');
         $data->phone=$request->input('phone');
         $data->fax=$request->input('fax');
         $data->email=$request->input('email');
@@ -55,7 +55,7 @@ class HomeController extends Controller
             $data->icon= $request->file('icon')->store('images');
         }
         $data->status=$request->input('status');
-        $data->save;
+        $data->save();
         return redirect()->route('admin.setting');
     }
 }
