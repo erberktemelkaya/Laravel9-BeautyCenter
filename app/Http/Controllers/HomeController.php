@@ -34,8 +34,7 @@ class HomeController extends Controller
     }
     public function about()
     {
-        echo"About";
-        exit();
+        
         $setting= Setting::first();
         return view("home.about",[
             'setting'=>$setting,
@@ -43,10 +42,8 @@ class HomeController extends Controller
         }
     public function references()
     {
-        echo"References";
-        exit();
         $setting= Setting::first();
-        return view("home.index",[
+        return view("home.references",[
             'setting'=>$setting,
             ]);
     }
