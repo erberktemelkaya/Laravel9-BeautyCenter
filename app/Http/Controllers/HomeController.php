@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use Illuminate\Support\Facades\DB;
 use App\Models\Setting;
+use App\Models\Message;
 
 class HomeController extends Controller
 {
@@ -55,7 +56,23 @@ class HomeController extends Controller
             'setting'=>$setting,
             ]);
     }
+    
 
+    
+    public function storemessage(Request $request)
+    {
+
+        $data= new Message();
+        $data->name=$request->input('name');
+        $data->email=$request->input('email');
+        $data->phone=$request->input('phone');
+        $data->subject=$request->input('subject');
+        $data->message=$request->input('message');
+        $data->ip= request()->ip();
+        $data->save();
+
+        return redirect()->route('contact')->with('info','Your message has been sent ,Thank You.');
+    }
     public function service($id)
     {
         
