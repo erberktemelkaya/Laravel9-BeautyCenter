@@ -118,7 +118,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="/admin/faq" class="dropdown-toggle no-arrow">
+						<a href="{{route('admin.faq.index')}}" class="dropdown-toggle no-arrow">
 						<i class="micon icon-copy ion-help"></i><span class="mtext">   FAQ</span>
 						</a>
 					</li>

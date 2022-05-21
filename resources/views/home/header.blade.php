@@ -5,8 +5,8 @@
                     <div class="col-md-6">
                         <div class="top-bar-left">
                             <div class="text">
-                                <h2>8:00 - 9:00</h2>
-                                <p>Opening Hour Mon - Fri</p>
+                                <h2>9:00 - 19:00</h2>
+                                <p>Monday – Friday: 9 to 7pm Saturday: 8 to 6pm Sunday: Closed</p>
                             </div>
                             <div class="text">
                                 <h2>+123 456 7890</h2>

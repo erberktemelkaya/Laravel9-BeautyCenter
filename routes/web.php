@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminPanel\AdminServiceController;
 use App\Http\Controllers\AdminPanel\CategoryController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
+use App\Http\Controllers\AdminPanel\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,5 +88,18 @@ Route::get('/delete/{id}','destroy')->name(name:'delete');
     Route::get('/delete/{id}','destroy')->name(name:'delete');
         
 });
+
+
+//**********************ADMIN FAQ ROUTES**********************/
+Route::prefix('/faq')->name('faq.')->controller(FaqController::class)->group(function () {
+
+    Route::get('/','index')->name(name:'index');
+    Route::get('/create','create')->name(name:'create');
+    Route::post('/store','store')->name(name:'store');
+    Route::get('/edit/{id}','edit')->name(name:'edit');
+    Route::post('/update/{id}','update')->name(name:'update');
+    Route::get('/show/{id}','show')->name(name:'show');
+    Route::get('/delete/{id}','destroy')->name(name:'delete');
+    });
 
 });

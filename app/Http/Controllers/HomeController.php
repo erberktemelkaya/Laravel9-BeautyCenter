@@ -7,6 +7,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\DB;
 use App\Models\Setting;
 use App\Models\Message;
+use App\Models\Faq;
 
 class HomeController extends Controller
 {
@@ -88,9 +89,11 @@ class HomeController extends Controller
     }
     public function categoryservices($id)
     {
+        $setting=Setting::first();
         $category=Category::find($id);
         $services=DB::table('services')->where('category_id',$id)->get();
         return view("home.categoryservices",[
+            'setting'=> $setting,
             'category'=> $category,
             'services'=> $services
             
