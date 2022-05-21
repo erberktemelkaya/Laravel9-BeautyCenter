@@ -233,43 +233,78 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
         <!-- Team End -->
         
         
-        <!-- Contact Start -->
-        <div class="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="{{route('home')}}">Home</a>
+                        <a href="">Contact</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                <div class="col-lg-3 col-md-3">
+                    {!! $setting->contact !!}
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="section-header text-center" style="margin-top: 90px;">
+            <p>Get In Touch</p>
+            <h2>If You Have Any Query, Please Contact Us</h2>
+        </div>
+        @include ('home.messages')
+        <div class="contact" style="margin-bottom: 90px;">
+       
+           
+                <div class="container">
+                    <div class="row">
+                    <div class="col-sm-12 col-md-12 d-none d-md-block">
+                    
+                <div class="contact-form">
+                <form action="{{route('storemessage')}}" class="contactform" method="post">
+                  @csrf
+                  <p class="comment-form-author">
+                    <label for="author"><span class="required"></span></label>
+                    <input type="text" name="name" placeholder="Name & Surname" size="30" required="required">
+                  </p>
+                  <p class="comment-form-author">
+                    <label for="author"> <span class="required"></span></label>
+                    <input type="text" name="phone" placeholder="Phone Number" size="30" required="required">
+                  </p>
+                  <p class="comment-form-email">
+                    <label for="email"><span class="required"></span></label>
+                    <input type="email" name="email"  placeholder="Email" aria-required="true" required="required">
+                  </p>
+                  <p class="comment-form-url">
+                    <label for="subject"></label>
+                    <input type="text" name="subject" placeholder="Subject">
+                  </p>
+                  <p class="comment-form-comment">
+                    <label for="message"></label>
+                    <textarea name="message" cols="45" rows="8" placeholder="Your Message" aria-required="true" required="required"></textarea>
+                  </p>
+                  <p class="form-submit">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                  </p>
+                </form>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+       
+
+
 
 
        

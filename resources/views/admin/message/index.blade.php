@@ -74,7 +74,7 @@
 								<td>{{$rs->status}}</td>
                               
 								<td>
-								    <a href="{{route('admin.message.show',['id'=>$rs->id])}}"
+								    <a href="{{route('admin.message.show',['id'=>$rs->id])}}" class="btn btn-success"
 								onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
 								  Show
 								

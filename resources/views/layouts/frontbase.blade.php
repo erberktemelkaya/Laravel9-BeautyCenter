@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>@yield("title")</title>
-        <meta name="description" content="@yield("description")">
-        <meta name="keywords" content="@yield("keywords")">
+        <meta name="description" content="@yield('description')">
+        <meta name="keywords" content="@yield('keywords')">
         <meta name="author" content="Erberk TEMELKAYA">
         <link rel="shortcut icon" href="{{Storage::url($setting->icon)}}" type="image/x-icon">
 

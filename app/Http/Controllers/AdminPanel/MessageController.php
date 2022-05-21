@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Message;
-use App\Models\Service;
 use Illuminate\Support\Facades\Storage;
 
 class MessageController extends Controller
@@ -18,7 +17,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $data = Service::all();
+        $data = Message::all();
         return view('admin.message.index',[
 
             'data'=> $data
@@ -55,7 +54,12 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+        $data=Message::find($id);
+        $data->status='Read';
+        $data->save();
+        return view ('admin.message.show',[
+           'data' => $data 
+        ]);
     }
 
     /**
@@ -78,7 +82,10 @@ class MessageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=Message::find($id);
+        $data->note= $request->note;
+        $data->save();
+        return redirect (route('admin.message.show',['id'=>$id]));
     }
 
     /**
@@ -89,6 +96,8 @@ class MessageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data=Message::find($id);
+        $data->delete();
+        return redirect (route('admin.message.index'));
     }
 }
