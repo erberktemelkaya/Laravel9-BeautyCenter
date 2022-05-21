@@ -35,6 +35,7 @@ Route::get('/about',[HomeController::class,'about'])->name(name:'about');
 Route::get('/references',[HomeController::class,'references'])->name(name:'references');
 Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
 Route::post('/storemessage',[HomeController::class,'storemessage'])->name(name:'storemessage');
+Route::get('/faq',[HomeController::class,'faq'])->name(name:'faq');
 
 Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');
 Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;

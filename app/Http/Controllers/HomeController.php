@@ -57,6 +57,16 @@ class HomeController extends Controller
             'setting'=>$setting,
             ]);
     }
+
+    public function faq()
+    {
+        $setting= Setting::first();
+        $datalist= Faq::all();
+        return view("home.faq",[
+            'setting'=>$setting,
+            'datalist'=>$datalist,
+            ]);
+    }
     
 
     
@@ -76,11 +86,12 @@ class HomeController extends Controller
     }
     public function service($id)
     {
-        
+          $setting=Setting::first();
         $data=Service::find($id);
         $images=DB::table('images')->where('product_id',$id)->get();
          return view("home.service",[
             'data'=> $data,
+            'setting'=> $setting,
             'images'=> $images
             
 
