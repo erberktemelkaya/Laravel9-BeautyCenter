@@ -1,10 +1,10 @@
 @extends('layouts.frontbase')
 
 
-@section('title', 'References | ' . $setting->title)
-@section('description', $setting->description)
-@section('keywords', $setting->keywords)
-@section('icon', Storage::url($setting->icon))
+@section('title', 'User Registration Page | ' )
+@section('description', )
+@section('keywords', )
+@section('icon',)
  
  
 @section('content')
@@ -12,11 +12,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>References</h2>
+                        <h2>Register</h2>
                     </div>
                     <div class="col-12">
                         <a href="{{route('home')}}">Home</a>
-                        <a href="">References</a>
+                        <a href="">Register</a>
                     </div>
                 </div>
             </div>
@@ -24,8 +24,8 @@
         <div class="about">
             <div class="container">
                 <div class="row align-items-center">
-                <div class="col-lg-20 col-md-12">
-                    {!! $setting->references !!}
+                <div class="col-lg-12 col-md-12">
+                @include('auth.register')
                 </div>
               </div>
             </div>

@@ -36,6 +36,13 @@ Route::get('/references',[HomeController::class,'references'])->name(name:'refer
 Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
 Route::post('/storemessage',[HomeController::class,'storemessage'])->name(name:'storemessage');
 Route::get('/faq',[HomeController::class,'faq'])->name(name:'faq');
+Route::post('/storecomment',[HomeController::class,'storecomment'])->name(name:'storecomment');
+Route::get('/loginuser',[HomeController::class,'loginuser'])->name('loginuser');;
+Route::get('/registeruser',[HomeController::class,'registeruser'])->name('registeruser');;
+Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
+Route::view('/loginadmin','admin.login')->name('loginadmin');;
+Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
+
 
 Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');
 Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;

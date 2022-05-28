@@ -168,12 +168,44 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
                         </p>
                         <h2>Client Name</h2>
                         <h3>Profession</h3>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <!-- Testimonial End -->
+        <div class="col-md-6">
+            <h4 class="text-uppercase">Write your Review</h4>
+            <p>Your email adress will not be published.</p>
 
+            <form class="review-form" action="{{route('storecomment')}}" method="post">
+                @csrf
+                <input class="input" type="hidden" name="service_id" value="{{$rs->id}}"/>
+                <div class="form-group">
+                <input class="input" type="text" name="subject" placeholder="Subject"/>
+            </div>
+            <div class="form-group">
+                <textarea class="input" name="review" type="text" placeholder="Your review"></textarea>
+            </div>
+            <div class="form-group">
+            <div class="input-rating">
+                <strong class="text-uppercase"Your Rating:></strong>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rate" value="5" /><label for="star5"></label>
+                    <input type="radio" id="star4" name="rate" value="4" /><label for="star4"></label>
+                    <input type="radio" id="star3" name="rate" value="3" /><label for="star3"></label>
+                    <input type="radio" id="star2" name="rate" value="2" /><label for="star2"></label>
+                    <input type="radio" id="star1" name="rate" value="1" /><label for="star1"></label>
+                 </div>
+               </div>
+             </div>
+             @auth
+          <button class="primary-btn">Submit</button>
+          @else
+        <a href="/login" class="primary-btn"> For Submit Your Review,Please Login </a> 
+          @endauth
+        </form>
+</div>
 
         <!-- Team Start -->
         <div class="team">
@@ -233,69 +265,8 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
         <!-- Team End -->
         
         
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Contact</h2>
-                    </div>
-                    <div class="col-12">
-                        <a href="{{route('home')}}">Home</a>
-                        <a href="">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                <div class="col-lg-3 col-md-3">
-                    {!! $setting->contact !!}
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="section-header text-center" style="margin-top: 90px;">
-            <p>Get In Touch</p>
-            <h2>If You Have Any Query, Please Contact Us</h2>
-        </div>
-        @include ('home.messages')
-        <div class="contact" style="margin-bottom: 90px;">
+      
        
-           
-                <div class="container">
-                    <div class="row">
-                    <div class="col-sm-12 col-md-12 d-none d-md-block">
-                    
-                <div class="contact-form">
-                <form action="{{route('storemessage')}}" class="contactform" method="post">
-                  @csrf
-                  <p class="comment-form-author">
-                    <label for="author"><span class="required"></span></label>
-                    <input type="text" name="name" placeholder="Name & Surname" size="30" required="required">
-                  </p>
-                  <p class="comment-form-author">
-                    <label for="author"> <span class="required"></span></label>
-                    <input type="text" name="phone" placeholder="Phone Number" size="30" required="required">
-                  </p>
-                  <p class="comment-form-email">
-                    <label for="email"><span class="required"></span></label>
-                    <input type="email" name="email"  placeholder="Email" aria-required="true" required="required">
-                  </p>
-                  <p class="comment-form-url">
-                    <label for="subject"></label>
-                    <input type="text" name="subject" placeholder="Subject">
-                  </p>
-                  <p class="comment-form-comment">
-                    <label for="message"></label>
-                    <textarea name="message" cols="45" rows="8" placeholder="Your Message" aria-required="true" required="required"></textarea>
-                  </p>
-                  <p class="form-submit">
-                  <button type="submit" class="btn btn-primary">Send Message</button>
-                  </p>
-                </form>
-              </div>
                         </div>
                     </div>
                 </div>

@@ -12,18 +12,37 @@
                                 <h2>+123 456 7890</h2>
                                 <p>Call Us For Appointment</p>
                             </div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                   
+            
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                @auth
+                <div class="top-bar-right">
+                
+
+                    <i class="fa fa-user-o"></i>
+                    <div class="text">
+                  <strong class="text-uppercase"><font color="white">{{Auth::user()->name}}</font></strong>
+</div>
+                  <div class="text">
+                  <a href="/logoutuser" class="aa-login"><font color="white">Logout </font></a>
+                   </div>
+                  @endauth
+                  @guest
+                  <div class="top-bar-right">
+                  <div class="text">
+                  <a href="/registeruser" class="aa-register"> <font color="white">Register </font></a>
+                  </div>
+                  <div class="text">
+                  <a href="/loginuser" class="aa-login"><font color="white">Login </font></a>
+                </div>
+                   @endguest
+                </div>
+
+              </div>
+            </div>
                 </div>
             </div>
         </div>
