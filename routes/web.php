@@ -50,7 +50,7 @@ Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservi
 
 Route::get('/deneme',[TestController::class,'deneme']);
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
 
 Route::get('/',[AdminHomeController::class,'index'])->name(name:'index');
 //**********************GENERAL SERVICES ROUTES**********************/
