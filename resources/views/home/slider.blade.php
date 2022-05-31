@@ -4,16 +4,16 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-text">
-                            <h1>BEAUTY CENTER</h1>
+                            <h1>TEKYA BEAUTY CENTER</h1>
                             <p>
-                               Güzellik merkezi ile ilgili açıklama yaz..
+                            {{$setting->description}}
                             </p>
                             
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 d-none d-md-block">
                         <div class="hero-image">
-                            <img src="{{asset('assets')}}/img/hero.png" alt="Hero Image">
+                            <img src="{{asset('adminpanel')}}/vendors/images/woman.jpg.png" alt="Hero Image">
                         </div>
                     </div>
                 </div>

@@ -13,11 +13,11 @@ h3,
 h4,
 h5, 
 h6 {
-    color: #1d2434;
+    color: #d000e3;
 }
 
 a {
-    color: #454545;
+    color: #000000;
     transition: .3s;
 }
 
@@ -62,7 +62,7 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #1d2434;
+    color: #1d341d;
     padding-top: 10px;
 }
 
@@ -73,7 +73,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 60px;
-    background: #1d2434;
+    background: #5f0000;
 }
 
 .top-bar .top-bar-left {
@@ -104,7 +104,7 @@ a:focus {
 }
 
 .top-bar .text h2 {
-    color: #eeeeee;
+    color: #ffffff;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
@@ -112,7 +112,7 @@ a:focus {
 }
 
 .top-bar .text p {
-    color: #eeeeee;
+    color: #ffffff;
     font-size: 12px;
     font-weight: 400;
     margin: 0;
@@ -170,7 +170,7 @@ a:focus {
 
 .navbar .navbar-brand {
     margin: 0;
-    color: #ffffff;
+    color: #737373;
     font-size: 45px;
     line-height: 0px;
     font-weight: 600;
@@ -190,7 +190,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #ffffff;
+    color: #c4c2c2;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -253,7 +253,7 @@ a:focus {
     width: 100%;
     margin-bottom: 45px;
     height: calc(100vh - 60px);
-    background: #D5B981;
+    background: #000000;
     overflow: hidden;
 }
 
@@ -262,12 +262,17 @@ a:focus {
 }
 
 .hero .hero-image {
-    position: relative;
+    position:relative;
+    width:1030px;
+    height:1030px;
+    right:300px;
+    top:-70px;
     text-align: right;
+
 }
 
 .hero .hero-image img {
-    max-width: 80%;
+    max-width:80%;
     max-height: 80%;
 }
 
@@ -282,14 +287,14 @@ a:focus {
 }
 
 .hero .hero-text h1 {
-    color: #1d2434;
+    color: #737373;
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .hero .hero-text p {
-    color: #1d2434;
+    color: #737373;
     font-size: 18px;
     margin-bottom: 25px;
 }

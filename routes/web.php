@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,10 +50,18 @@ Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'servic
 Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;
 
 Route::get('/deneme',[TestController::class,'deneme']);
+//**********************USER AUTH CONTROL**********************/
+Route::middleware('auth')->group(function() {
+    
+    //**********************USER ROUTES**********************/
+Route::prefix('userpanel')->prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function () {
+    Route::get('/','index')->name(name:'index');
+});
 
+    //**********************ADMIN PANEL ROUTES**********************/
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
-
 Route::get('/',[AdminHomeController::class,'index'])->name(name:'index');
+
 //**********************GENERAL SERVICES ROUTES**********************/
 Route::get('/setting',[AdminHomeController::class,'setting'])->name(name:'setting');
 Route::post('/setting',[AdminHomeController::class,'settingUpdate'])->name(name:'setting.update');
@@ -123,5 +132,6 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
     Route::get('/destroyrole/{uid}/{rid}','destroyrole')->name(name:'destroyrole');
 
         });
+    });
 
 });

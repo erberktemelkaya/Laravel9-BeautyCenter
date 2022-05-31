@@ -23,12 +23,23 @@
                 
 
                     <i class="fa fa-user-o"></i>
-                    <div class="text">
-                  <strong class="text-uppercase"><font color="white">{{Auth::user()->name}}</font></strong>
+                    <div class="nav-item dropdown">
+                  <strong class="nav-link dropdown-toggle" data-toggle="dropdown"><font color="white">{{Auth::user()->name}}</font></strong>
+                  <div class="dropdown-menu">
+                  <ul class="custom-menu">
+    <li><a href="{{route('userpanel.index')}}"><i class="fa fa-user-o"></i> My Account </a></li>
+    <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist </a></li>
+    <li><a href="#"><i class="fa fa-exchange"></i> Compare </a></li>
+    <li><a href="#"><i class="fa fa-check"></i> Checkout  </a></li>
+    <li><a href="#"><i class="fa fa-unlock-alt"></i> Login </a></li>
+    <li><a href="#"><i class="fa fa-user-plus"></i> Create an Account </a></li>
+</ul>
+</div>
 </div>
                   <div class="text">
                   <a href="/logoutuser" class="aa-login"><font color="white">Logout </font></a>
                    </div>
+                  
                   @endauth
                   @guest
                   <div class="top-bar-right">
