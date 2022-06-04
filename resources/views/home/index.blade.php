@@ -174,39 +174,6 @@ Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler 
             </div>
         </div>
         <!-- Testimonial End -->
-        <div class="col-md-6">
-            <h4 class="text-uppercase">Write your Review</h4>
-            <p>Your email adress will not be published.</p>
-
-            <form class="review-form" action="{{route('storecomment')}}" method="post">
-                @csrf
-                <input class="input" type="hidden" name="service_id" value="{{$rs->id}}"/>
-                <div class="form-group">
-                <input class="input" type="text" name="subject" placeholder="Subject"/>
-            </div>
-            <div class="form-group">
-                <textarea class="input" name="review" type="text" placeholder="Your review"></textarea>
-            </div>
-            <div class="form-group">
-            <div class="input-rating">
-                <strong class="text-uppercase"Your Rating:></strong>
-                <div class="stars">
-                    <input type="radio" id="star5" name="rate" value="5" /><label for="star5"></label>
-                    <input type="radio" id="star4" name="rate" value="4" /><label for="star4"></label>
-                    <input type="radio" id="star3" name="rate" value="3" /><label for="star3"></label>
-                    <input type="radio" id="star2" name="rate" value="2" /><label for="star2"></label>
-                    <input type="radio" id="star1" name="rate" value="1" /><label for="star1"></label>
-                 </div>
-               </div>
-             </div>
-             @auth
-          <button class="primary-btn">Submit</button>
-          @else
-        <a href="/login" class="primary-btn"> For Submit Your Review,Please Login </a> 
-          @endauth
-        </form>
-</div>
-
         <!-- Team Start -->
         <div class="team">
             <div class="container">

@@ -88,7 +88,7 @@ class HomeController extends Controller
     }
     public function storecomment(Request $request)
     {
-        //dd($request); //Check your values
+        // dd($request); //Check your values
         $data= new Comment();
         $data->user_id=Auth::id();
         $data->service_id=$request->input('service_id');
@@ -98,17 +98,19 @@ class HomeController extends Controller
         $data->ip= request()->ip();
         $data->save();
 
-        return redirect()->route('service',['id'=>$request->input('service_id')])->with('info','Your comment has been sent ,Thank You.');
+        return redirect()->route('service',['id'=>$request->input('service_id')])->with('success','Your comment has been sent ,Thank You.');
     }
     public function service($id)
     {
           $setting=Setting::first();
         $data=Service::find($id);
         $images=DB::table('images')->where('product_id',$id)->get();
+        $reviews= Comment::where('service_id',$id)->get();
          return view("home.service",[
             'data'=> $data,
             'setting'=> $setting,
-            'images'=> $images
+            'images'=> $images,
+            'reviews'=> $reviews
             
 
         
