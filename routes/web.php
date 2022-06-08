@@ -14,6 +14,8 @@ use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\UserController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,9 +56,11 @@ Route::get('/deneme',[TestController::class,'deneme']);
 //**********************USER AUTH CONTROL**********************/
 Route::middleware('auth')->group(function() {
     
-    //**********************USER ROUTES**********************/
+    //**********************USER PANEL ROUTES**********************/
 Route::prefix('userpanel')->prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function () {
     Route::get('/','index')->name(name:'index');
+    Route::get('/reviews','reviews')->name(name:'reviews');
+    Route::get('/reviewdelete/{id}','reviewdelete')->name(name:'reviewdelete');
 });
 
     //**********************ADMIN PANEL ROUTES**********************/

@@ -39,13 +39,6 @@
                         <a href="price.html" class="nav-item nav-link">Price</a>
                         <a href="team.html" class="nav-item nav-link">Barber</a>
                         <a href="portfolio.html" class="nav-item nav-link">Gallery</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                <a href="single.html" class="dropdown-item">Single Page</a>
-                            </div>
-                        </div>
                         <a href="{{route('faq')}}" class="nav-item nav-link">FAQ</a>
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>

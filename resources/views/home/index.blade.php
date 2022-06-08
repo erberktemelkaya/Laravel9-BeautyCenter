@@ -17,41 +17,7 @@
        
         
         <!-- About Start -->
-        <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="about-img">
-                            <img src="{{asset('assets')}}/img/about.jpg" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-6">
-                        <div class="section-header text-left">
-                            <p>Hakkımızda</p>
-                            <h2>25 Yıllık Tecrübe</h2>
-                        </div>
-                        <div class="about-text">
-                            <p>
-                                
-Dünyanın güzelliklerle dolu başkenti Ankara’nın kalbi, ………….20 senesinden beri kuaför ve güzellik merkezi hizmeti veriyoruz…
-Hijyen kuralları prensibimizle, değerli misafirlerimizin “tam hayalimdeki gibi oldu” demeleri için, tecrübeli ve yetenekli 40 kişiden oluşan profesyonel ekibimizle hizmet sağlıyoruz.
-Zaradis Yıldız VIP; ulaşılabilir lüks mottosuyla, bakım, güzellik ve doğallığı bir arada sunuyoruz. Aynada en güzel halinizi görmeniz için sizi salonumuza bekliyoruz.15 Yıldır, her ortamda her daim göz kamaştıran olmanız için yanınızdayız.
-                            </p>
-                            <p>
-                            80′ li yılların ortasında iğneli epilasyon ile sektöre adımını atan Gülümser Öztürk, sizlere daha iyi bir hizmet verebilmek amacıyla, 1997 senesinden beri Aşağı Ayrancı ‘ da “Rose Güzellik” salonunu adı altında profesyonel ekibi ile sizlere güzellik ve bakım hizmeti vermektedir.
-
-İğneli epilasyon ve cilt bakımı ile başladığımız bu yolda kaş tasarımı, lazer epilasyon, ipek kirpik, kirpik lifting, hydrafacial, tırnak tasarımı, kalıcı oje, cilt gençleştirme gibi hizmetleri, yenilikleri takip ederek, doğru ekipman ve doğru ekiple sizlere güvenle sunmaktayız.
-
-Bizim için en önemli husus sizlere güzellik hizmetlerini güvenle verebilmektir. Bu nedenle uygulatmayı düşündüğünüz her işlem öncesi ve sonrasında uzman ve güler yüzlü ekibimizden her zaman bilgi edinebilirsiniz.
-
-Rose güzellik salonu olarak vizyonumuz kendini sürekli geliştirmek ve güler yüzlü hizmeti sizlere sağlamaktır. Sizleri yalnızca güzellik hizmeti almak için değil sohbet ve tanışmak için de merkezimize bekleriz.
-                            </p>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- About End -->
 
 

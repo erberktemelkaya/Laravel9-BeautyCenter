@@ -102,7 +102,7 @@ class HomeController extends Controller
     }
     public function service($id)
     {
-          $setting=Setting::first();
+        $setting=Setting::first();
         $data=Service::find($id);
         $images=DB::table('images')->where('product_id',$id)->get();
         $reviews= Comment::where('service_id',$id)->get();

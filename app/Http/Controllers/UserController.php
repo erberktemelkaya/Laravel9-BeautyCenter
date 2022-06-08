@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Service;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Setting;
+use App\Models\Message;
+use App\Models\Comment;
+use App\Models\Faq;
 
 class UserController extends Controller
 {
@@ -27,7 +34,7 @@ class UserController extends Controller
     {
         $setting= Setting::first();
         $comments= Comment::where('user_id','=',Auth::id())->get();
-        return view("home.about",[
+        return view('home.user.comments',[
             'setting'=>$setting,
             'comments'=>$comments
 
@@ -95,8 +102,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function reviewdelete($id)
     {
-        //
+        $data=Comment::find($id);
+        
+        $data->delete();
+        return redirect (route('userpanel.reviews'));
     }
 }

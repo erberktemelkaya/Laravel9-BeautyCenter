@@ -14,7 +14,11 @@
                     
                     <div class="col-12">
                         <a href="">{{$data->title}}</a>
-                        <a href="">{{$data->title}}</a>
+                        @php 
+                        $average = $data->comment->average('rate');
+                        @endphp
+                        {{$average}}
+                        <a href="#">{{$data->comment->count('id')}} Review(s) / Add Review</a>
                     </div>
                 </div>
             </div>
