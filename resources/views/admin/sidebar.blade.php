@@ -92,15 +92,11 @@
 						</a>
 					</li>
 					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
-						<i class="micon icon-copy ion-ios-box"></i></span><span class="mtext">      Orders</span>
+						<a href="/admin/appointment" class="dropdown-toggle no-arrow">
+						<i class="micon icon-copy ion-ios-box"></i></span><span class="mtext">      Appointments
+						</span>
 						</a>
-						<ul class="submenu">
-							<li><a href="index.html">New Orders</a></li>
-							<li><a href="index2.html">Accepted Orders</a></li>
-							<li><a href="index3.html">Shipping Orders</a></li>
-							<li><a href="index4.html">Completed Orders</a></li>
-						</ul>
+						
 					
 					<li>
 						<a href="/admin/category" class="dropdown-toggle no-arrow">

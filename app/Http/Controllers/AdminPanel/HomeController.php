@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Comment;
+use App\Models\Appointment;
 
 class HomeController extends Controller
 {

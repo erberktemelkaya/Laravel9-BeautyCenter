@@ -35,12 +35,10 @@
                         <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                         <a href="{{route('references')}}" class="nav-item nav-link">References</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="price.html" class="nav-item nav-link">Price</a>
-                        <a href="team.html" class="nav-item nav-link">Barber</a>
-                        <a href="portfolio.html" class="nav-item nav-link">Gallery</a>
                         <a href="{{route('faq')}}" class="nav-item nav-link">FAQ</a>
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <a href=" {{route('userpanel.addappointment')}}" class="nav-item nav-link">Appointment</a>
+                        
                     </div>
                 </div>
             </div>

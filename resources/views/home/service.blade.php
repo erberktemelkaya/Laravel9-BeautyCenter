@@ -51,7 +51,7 @@
                             <h3> Detaylar </h3>
                         
                             <p>{!!$data->detail!!}</p>
-                            <a class="btn" href="">Ücret : {{$data->price}}₺</a>
+                            <a class="btn" href="{{route('userpanel.addappointment')}}">RANDEVU AL</a>
                         </div>
                     </div>
                     

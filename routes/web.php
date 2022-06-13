@@ -13,6 +13,7 @@ use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminPanel\AppointmentController;
 
 
 
@@ -49,6 +50,7 @@ Route::view('/loginadmin','admin.login')->name('loginadmin');;
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 
 
+
 Route::get('/service/{id}',[HomeController::class,'service'])->name(name:'service');
 Route::get('/categoryservices/{id}/{slug}',[HomeController::class,'categoryservices'])->name(name:'categoryservices');;
 
@@ -61,7 +63,18 @@ Route::prefix('userpanel')->prefix('userpanel')->name('userpanel.')->controller(
     Route::get('/','index')->name(name:'index');
     Route::get('/reviews','reviews')->name(name:'reviews');
     Route::get('/reviewdelete/{id}','reviewdelete')->name(name:'reviewdelete');
+    Route::get('/addappointment',[UserController::class,'addappointment'])->name(name:'addappointment');
+    Route::post('/addstore','addstore')->name(name:'addstore');
+    Route::get('/myappointment','myappointment')->name(name:'myappointment');
+    Route::get('/editappointment/{id}','editappointment')->name(name:'editappointment');
+    Route::post('/updateappointment/{id}','updateappointment')->name(name:'updateappointment');
+    Route::get('/showappointment/{id}','showappointment')->name(name:'showappointment');
+    Route::get('/deleteappointment/{id}','deleteappointment')->name(name:'deleteappointment');
+    
+  
+
 });
+
 
     //**********************ADMIN PANEL ROUTES**********************/
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
@@ -147,5 +160,17 @@ Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->g
 
         });
     });
+    //**********************ADMIN APPOINTMENT ROUTES**********************/
+Route::prefix('/admin/appointment')->name('admin.appointment.')->controller(AppointmentController::class)->group(function () {
+
+    Route::get('/','index')->name(name:'index');
+    Route::get('/create','create')->name(name:'create');
+    Route::post('/store','store')->name(name:'store');
+    Route::get('/edit/{id}','edit')->name(name:'edit');
+    Route::post('/update/{id}','update')->name(name:'update');
+    Route::get('/show/{id}','show')->name(name:'show');
+    Route::get('/delete/{id}','destroy')->name(name:'delete');
+    });
+
 
 });

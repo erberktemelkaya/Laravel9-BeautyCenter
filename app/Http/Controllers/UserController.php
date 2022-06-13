@@ -11,6 +11,7 @@ use App\Models\Setting;
 use App\Models\Message;
 use App\Models\Comment;
 use App\Models\Faq;
+use App\Models\Appointment;
 
 class UserController extends Controller
 {
@@ -109,4 +110,97 @@ class UserController extends Controller
         $data->delete();
         return redirect (route('userpanel.reviews'));
     }
+    
+    public function addappointment()
+    {
+        $setting= Setting::first();
+       
+        return view('home.user.addappointment',[
+            'setting'=>$setting,
+            
+
+            ]);
+    }
+    public function addstore(Request $request)
+    {
+        $data=new Appointment();
+        $data->service_id= $request->service_id;
+        $data->user_id=Auth::id(); //$request->category_id;
+        $data->name = $request->name;
+        $data->service = $request->service;
+        $data->date = $request->date;
+        $data->time = $request->time;
+        $data->price = $request->price;
+        $data->payment = $request->payment;
+        $data->status = $request->status;
+       
+        $data->save();
+        return redirect ('userpanel/myappointment');
+        
+    }
+
+    public function myappointment()
+    {
+        $service=Appointment::where('user_id','=',Auth::id())->get();
+        $setting= Setting::first();
+        return view('home.user.myappointment',[
+            'setting'=>$setting,
+            'service'=>$service
+            
+
+            ]);
+         }
+
+    public function editappointment(Appointment $appointment,$id)
+    {
+       $data=Appointment::find($id);
+       $setting= Setting::first();
+       return view('home.user.editappointment',[
+        'setting'=>$setting,
+        'data'=>$data
+        
+
+        ]);
+
+
+    }
+    public function updateappointment(Request $request,Appointment $appointment,$id)
+    {
+       $data=Appointment::find($id);
+       $data->user_id=Auth::id(); //$request->category_id;
+       $data->name = $request->name;
+       $data->service = $request->service;
+       $data->date = $request->date;
+       $data->time = $request->time;
+       $data->price = $request->price;
+       $data->payment = $request->payment;
+       $data->status = $request->status;
+      
+       $data->save();
+
+       return redirect('userpanel/myappointment');
+   }
+
+   public function showappointment(Appointment $appointment,$id)
+   {
+
+    $data=Appointment::find($id);
+    $setting= Setting::first();
+    return view('home.user.showappointment',[
+     'setting'=>$setting,
+     'data'=>$data
+     
+
+     ]);
+   }
+
+   public function deleteappointment(Appointment $appointment,$id)
+   {
+
+    $data=Appointment::find($id);
+        
+        $data->delete();
+        return redirect ('userpanel/myappointment');
+   }
+
 }

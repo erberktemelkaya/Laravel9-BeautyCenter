@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Comment & Reviews List')
+@section('title','Appointment List')
 
  
 
@@ -14,7 +14,7 @@
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
 
-							
+							<a href="{{route('admin.appointment.create')}}" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Appointment</a>
 
 								
 							</div>
@@ -42,7 +42,7 @@
 						<div class="pull-left">
 
 							
-							<h4 class="text-blue h4">Comment List</h4>
+							<h4 class="text-blue h4">Appointment List</h4>
 							
 						</div>
 						<div class="pull-right">
@@ -53,12 +53,14 @@
 						<thead>
 							<tr>
 								<th style="width: 10px">Id</th>
+								<th>Name</th>
+								<th>Service & Price</th>
+								<th>Date</th>
+								<th>Time</th>
 								
-								<th>Service</th>
-								<th>Subject</th>
-								<th>Review</th>
-								<th>Rate</th>
+								<th>Payment</th>
 								<th>Status</th>
+								<th style="width:40px">Edit</th>
 								<th style="width:40px">Delete</th>
 								<th style="width:40px">Show</th>
 							</tr>
@@ -68,23 +70,18 @@
 						@foreach($data as $rs)
                             <tr>
                                 <td>{{$rs->id}}</td>
-						        <td>{{$rs->service->title}}</td>
-					            <td>{{$rs->subject}}</td>
-								<td>{{$rs->review}}</td>
-								<td>{{$rs->rate}}</td>
-								<td>{{$rs->status}}</td>
-                              
-								<td>
-								    <a href="{{route('admin.comment.show',['id'=>$rs->id])}}" class="btn btn-success"
-								onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')">
-								  Show
+								<td>{{$rs->name}}</td>
+								<td>{{$rs->service}}</td>
+                                <td>{{$rs->date}}</td>
+								<td>{{$rs->time}}</td>
+                               
+								<td>{{$rs->payment}}</td>
+                                <td>{{$rs->status}}</td>
+								<td><a href="{{route('admin.appointment.edit',['id'=>$rs->id])}}"class="btn btn-dark">Edit </a> </td>
+                                <td><a href="{{route('admin.appointment.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
+                                <td><a href="{{route('admin.appointment.show',['id'=>$rs->id])}}"class="btn btn-warning">Show </a></td>
 								
-                                    </a>
-							
-							</td>
-							<td><a href="{{route('admin.comment.delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')" class="btn btn-danger">Delete</a></td>
-                              
-							    <tr>
+							<tr>
 							
 						@endforeach
 						</tbody>

@@ -10,6 +10,7 @@ use App\Models\Setting;
 use App\Models\Message;
 use App\Models\Comment;
 use App\Models\Faq;
+use App\Models\Appointment;
 
 class HomeController extends Controller
 {
@@ -25,12 +26,14 @@ class HomeController extends Controller
     {
         $page='home';
         $sliderdata=Service::limit(20)->get();
+        $sliderdata1=Service::limit(3)->get();
         $servicelist1=Service::limit(20)->get();
         $setting= Setting::first();
         return view("home.index",[
             'page'=>$page,
             'setting'=>$setting,
             'sliderdata'=> $sliderdata,
+            'sliderdata1'=> $sliderdata1,
             'servicelist1'=> $servicelist1
 
         

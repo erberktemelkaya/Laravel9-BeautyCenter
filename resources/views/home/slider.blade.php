@@ -46,8 +46,8 @@
 <div class="blog">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Latest From Blog</p>
-                    <h2>Learn More from Latest Barber Blog</h2>
+                    <p>Our Services</p>
+                    <h2>Learn More for Our Services</h2>
                 </div>
                 <div class="owl-carousel blog-carousel">
                 @foreach($sliderdata as $rs)
